@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人脸识别相关"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/settings_subtitle"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/active_face_detect_engine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="active_face_detect_engine"
+                    android:text="激活人脸识别引擎"
+                    android:textSize="@dimen/settings_key" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/active_face_detect_engine_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="未激活"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_detect_degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_detect_degree"
+                    android:text="设置人脸识别角度"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/detect_degree_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="270度"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="设置活体检测"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Switch
+                    android:id="@+id/set_liveness_detect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/liveness_detect_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="开"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_filter"
+                    android:text="设置识别过滤条件"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/filter_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="无过滤条件"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="voice_reminder_interval"
+                    android:text="语音通知时间间隔"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/subtract_interval"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/subtract_interval"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/voice_reminder_interval_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="10秒"
+                    android:textSize="@dimen/settings_value" />
+                <ImageView
+                    android:id="@+id/add_interval"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/add_interval"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语音播报相关"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/settings_subtitle"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_voice_synthetic_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_voice_synthetic_way"
+                    android:text="设置语音合成方式"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/voice_synthetic_way_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="本地合成"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_pronunciation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_pronunciation"
+                    android:text="设置发音人"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/pronunciation_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="小燕"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/set_voice_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_voice_speed"
+                    android:text="设置语速"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/voice_speed_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="50"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_voice_tones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_voice_tones"
+                    android:text="设置音调"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/voice_tones_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="50"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/set_voice_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_voice_volume"
+                    android:text="设置音量"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/voice_volume_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="50"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_audio_stream_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_audio_stream_type"
+                    android:text="设置音频流类型"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/audio_stream_type_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="音乐"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无线摄像头相关"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/settings_subtitle"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_video_resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_audio_stream_type"
+                    android:text="设置视频清晰度"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/video_resolution_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="高清"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_high"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_settings_item"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/set_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="set_audio_stream_type"
+                    android:text="设置静音"
+                    android:textSize="@dimen/settings_key" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/mute_or_nor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="关闭"
+                    android:textSize="@dimen/settings_value" />
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="功能模式相关设置"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/settings_subtitle"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_settings_dialog"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RadioGroup
+        android:id="@+id/set_filter_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dialog_padding_size">
+
+        <RadioButton
+            android:id="@+id/no_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无过滤条件" />
+
+        <RadioButton
+            android:id="@+id/only_high_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="只识别优先级为(高) (中)的人脸" />
+
+        <RadioButton
+            android:id="@+id/only_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="只识别优先级为(高)的人脸" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD7D7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/background_white_corner"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:onClick="face_library_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="人脸库"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_title_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/background_white_corner"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:onClick="video_reg_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:text="视频注册"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_title_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/background_white_corner"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:onClick="image_reg_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:text="图片注册"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_title_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/background_white_corner"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:onClick="temp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:text="temp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_title_size" />
+    </LinearLayout>
+
+</LinearLayout>
